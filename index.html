@@ -2,7 +2,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script>
-    window.onload = function()
+    fn_restart = function()
     {
         var dev = "10.0.0.1";
         var devCtrlUrl="http://" + dev + "/devcontrol?callback=?";
@@ -10,8 +10,11 @@
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open( "GET", devCtrlUrl + dev_command, true );
         xmlHttp.send();
-        setTimeout(function() { window.close(); }, 4000);
     };
 	</script>
 </head>
+<body>
+<p>Yota many restart</p>
+<button onclick=fn_restart(); > Restart / перезапуск </button>
+</body>
 </html>
